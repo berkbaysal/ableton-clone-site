@@ -1,14 +1,23 @@
 import React from "react";
 
 function Infobox(props) {
+    let topText,bottomText;
+    if(!props.content.topText){
+        topText = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quisquam reiciendis earum velit ex atque corrupti, quaerat officiis voluptas, error eveniet tempora alias aspernatur nesciunt? Sed impedit delectus minus ipsam enim quia nobis. Doloremque, nisi."
+    }
+    else{
+        topText = props.content.topText;
+    }
+    if(!props.content.bottomText){
+        bottomText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repudiandae, et incidunt fugiat eos, suscipit sapiente eum nulla atque aliquam, maiores iste? Nisi, eveniet sed magnam exercitationem sint delectus quo dolor ut minima odio quam."
+    }
+    else{
+        bottomText = props.content.bottomText;
+    }
     return (
         <div className="ableton-style-infobox">
-            <p className="top-line">
-                We make <a href="" className="inline-link">Live</a>, Push and Link — unique software and hardware for music creation and performance. With these products, our community of users creates amazing things.
-            </p>
-            <p className="bottom-line">
-            Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.
-            </p>
+            <p className="top-line">{topText}</p>
+            <p className="bottom-line">{bottomText}</p>
         </div>
     );
 }

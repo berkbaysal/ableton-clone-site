@@ -22,8 +22,9 @@ function Videobox(props) {
                 {!videoPlayerActive && <FontAwesomeIcon icon={faPlayCircle} className="play-icon" onClick={toggleVideoPlayer}/>}
                 {!videoPlayerActive && <img src={`https://img.youtube.com/vi/${props.videoId}/maxresdefault.jpg`} className="video-thumbnail" style={{ aspectRatio: style.aspectRatio }} ></img>}
                 {videoPlayerActive && <iframe className="video-player" style={{ aspectRatio: style.aspectRatio}} src={`https://www.youtube.com/embed/${props.videoId}?color=white&autoplay=1`} frameborder="0" allowfullscreen="true"></iframe>}
-                <p className="video-label">{props.label}</p>
+                <p className="video-label">{props.label}</p>              
             </div>
+            
         </div>
     );
 }

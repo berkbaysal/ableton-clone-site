@@ -1,4 +1,3 @@
-import { faImages } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 
