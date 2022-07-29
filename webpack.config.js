@@ -34,12 +34,17 @@ module.exports = function (env, argv) {
                     ],
                 },
                 {
-                    test:/\.(png|jpg|jpeg|gif)/,
+                    test: /\.(png|jpg|jpeg|gif)/,
                     loader: "file-loader",
                     options: {
                         outputPath: "./assets/img",
-                        publicPath:"../assets/img"
-                    }   
+                        publicPath: "../assets/img"
+                    }
+                },
+                {
+                    test: /\.svg$/i,
+                    issuer: /\.[jt]sx?$/,
+                    use: ['@svgr/webpack'],
                 }
 
             ]
