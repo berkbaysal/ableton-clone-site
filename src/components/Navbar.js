@@ -32,7 +32,7 @@ function Navbar() {
     return (
 
         <header>
-            <nav>
+            <nav className="navbar-ableton-style">
                 <div className={`collapsed-menu ${(navbarStatus.isMobileModeActive && navbarStatus.isSlidingMenuUp) ? "" : "--negative"}`}>
                     <Logo className="navbar-logo-collapsed" />
                     <span className="collapsed-menu-toggle" onClick={toggleSlidingMenu}>Menu <FontAwesomeIcon icon={faCaretDown} className="font-awesome-icon" /></span>

@@ -32,8 +32,8 @@ ul {
     font-size: 0.8rem;
 }
 
-
-nav {
+///////////ABLETON STYLE NAVBAR START/////////////////
+.navbar-ableton-style {
 
     a {
         text-decoration: none;
@@ -179,7 +179,7 @@ nav {
 }
 
 @media only screen and (max-width: 1300px) {
-    nav {
+    .navbar-ableton-style {
 
         .main-bar,
         .collapsed-menu {
@@ -220,7 +220,7 @@ nav {
 
 @media only screen and (max-width: 950px) {
 
-    nav {
+    .navbar-ableton-style {
         position: relative;
 
         .collapsed-menu {
@@ -231,13 +231,14 @@ nav {
         .highlight-link {
             color: inherit;
         }
-        .--slide-up{
+
+        .--slide-up {
             transform: translateY(-110%);
         }
 
-        .--negative{
+        .--negative {
             color: white;
-            fill:white;
+            fill: white;
             background-color: $highlight-two;
         }
 
@@ -296,25 +297,30 @@ nav {
                 }
             }
 
-            .hidden-bar{
+            .hidden-bar {
                 flex-direction: column;
                 padding: 0;
-                .upper-hidden-bar, .lower-hidden-bar{
+
+                .upper-hidden-bar,
+                .lower-hidden-bar {
                     flex-direction: column;
                     padding: 0;
-                    
-                    .hidden-bar-title{
+
+                    .hidden-bar-title {
                         font-size: 1.3rem;
                         padding: 1rem 0;
                     }
-                    .hidden-bar-top-menu,.hidden-bar-bottom-menu{
+
+                    .hidden-bar-top-menu,
+                    .hidden-bar-bottom-menu {
                         flex-direction: column;
                         padding: 0;
 
-                        .hidden-bar-subtitle{
+                        .hidden-bar-subtitle {
                             font-size: 1.1rem;
                         }
-                        li{
+
+                        li {
                             padding: 0.3rem 0;
                             font-size: 0.9rem;
                         }
@@ -327,3 +333,46 @@ nav {
     }
 
 }
+
+///////////ABLETON STYLE NAVBAR END/////////////////
+
+
+
+//////////ABLETON STYLE HERO BEGIN//////////////////
+
+.ableton-style-hero{
+    height: calc(100vh - 8rem);
+   .hero-image-container{
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    padding: 0 min(4vw,4rem);
+    .hero-image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .hero-image-overlay{
+        position: absolute;
+        color: $highlight;
+        font-size: 10rem;
+        font-weight: 500;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+   }
+}
+
+@media only screen and (max-width:780px){
+    .ableton-style-hero{
+        .hero-image-container{
+            .hero-image-overlay{
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+//////////ABLETON STYLE HERO END//////////////////
