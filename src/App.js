@@ -10,6 +10,9 @@ import ThreeImages from "./components/ThreeImages";
 import ThreeImageOne from "./assets/img/three-images-one.jpg";
 import ThreeImageTwo from "./assets/img/three-images-two.jpg";
 import ThreeImageThree from "./assets/img/three-images-three.jpg";
+import CardImage from "./assets/img/card-image.jpg";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 const TEXT_DATA = [
     {
@@ -27,6 +30,8 @@ const TEXT_DATA = [
 
 ]
 
+const CARD_TEXT = "We’re really proud of the work we’ve done so far. But there’s so much more to come. If you’d like to be a part of it, please join us. ";
+
 function App() {
 
     return (
@@ -38,7 +43,11 @@ function App() {
             <Infobox content={TEXT_DATA[1]} />
             <Videobox width="66%" videoId="BC19kwABFwc" label="A delightful music video" />
             <Infobox content={TEXT_DATA[2]} />
-            <ThreeImages content = {[ThreeImageOne,ThreeImageTwo,ThreeImageThree]} />
+            <ThreeImages content = {[ThreeImageOne,ThreeImageTwo,ThreeImageThree]} backgroundColor={"#b6ffc0"} />
+            <Infobox/>
+            <Card content={{image: CardImage, text:CARD_TEXT, linkSrc:"#", linkText:"See latest jobs"}}/>
+            <Footer/>
+
         </main>
     );
 }

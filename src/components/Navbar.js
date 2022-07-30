@@ -40,7 +40,9 @@ function Navbar() {
                 <div className={`mobile-slide-group ${(navbarStatus.isMobileModeActive && navbarStatus.isSlidingMenuUp) ? "--slide-up" : ""}`}>
                     <div className="main-bar">
                         <div className="left-group">
-                            <Logo className="navbar-logo-expanded" />
+                            <div className="expanded-logo-container">
+                                <Logo className="navbar-logo-expanded" />
+                            </div>
                             <ul className="main-bar-menu">
                                 <li className="main-bar-item"><a href="#" className="menu-category">Live</a></li>
                                 <li className="main-bar-item"><a href="#" className="menu-category">Push</a></li>
