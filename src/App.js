@@ -41,7 +41,7 @@ function App() {
             <Infobox content={TEXT_DATA[0]} />
             <TwoImages backgroundAlign="right" content={[ImageOne, ImageTwo]} backgroundColor="#fbffa7" />
             <Infobox content={TEXT_DATA[1]} />
-            <Videobox width="66%" videoId="BC19kwABFwc" label="A delightful music video" />
+            <Videobox width="66%" videoId="cZdO2e8K29o" label="A delightful music video" />
             <Infobox content={TEXT_DATA[2]} />
             <ThreeImages content = {[ThreeImageOne,ThreeImageTwo,ThreeImageThree]} backgroundColor={"#b6ffc0"} />
             <Infobox/>

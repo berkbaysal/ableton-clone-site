@@ -10,7 +10,8 @@ module.exports = function (env, argv) {
         output: {
             path: path.join(__dirname, '/dist'),
             filename: '[name][contenthash:8].js',
-            publicPath: "/"
+            publicPath: (isDevelopment ? "/" : "./"),
+            clean: true
         },
         devServer: {
             port: 9000,
@@ -37,8 +38,8 @@ module.exports = function (env, argv) {
                     test: /\.(png|jpg|jpeg|gif)/,
                     loader: "file-loader",
                     options: {
-                        outputPath: "./assets/img",
-                        publicPath: "../assets/img"
+                        outputPath: "./src/assets/img",
+                        publicPath: "./src/assets/img"
                     }
                 },
                 {
@@ -55,7 +56,7 @@ module.exports = function (env, argv) {
             }),
             new HtmlWebpackPlugin({
                 template: './public/index.html',
-                filename: (isDevelopment ? "index.html" : "./public/index.html")
+                filename: (isDevelopment ? "index.html" : "./index.html")
             })
         ]
     };
